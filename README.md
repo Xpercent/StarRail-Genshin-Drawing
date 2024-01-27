@@ -12,6 +12,7 @@ https://github.com/Xpercen/StarRail-Genshin-Drawing/releases<br>
 
 ## 编译过程
 运行环境QT 5.1x
+安装LAV(在release文件中)
 ```bash
 open main_cq.pro 并编译
 
