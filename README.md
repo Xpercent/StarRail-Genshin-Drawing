@@ -11,7 +11,7 @@ https://github.com/Xpercen/StarRail-Genshin-Drawing/releases<br>
 ![Snipaste_2024-01-28_00-53-12](https://github.com/Xpercent-YX/StarRail-Genshin-Drawing/assets/149877139/64fe0885-11a6-4d13-b9de-4b090d5bf765)
 
 ## 编译过程
-运行环境QT 5.1x
+运行环境QT 5.1x<br>
 安装LAV(在release文件中)
 ```bash
 open main_cq.pro 并编译
