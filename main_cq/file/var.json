@@ -1,0 +1,13 @@
+{
+    "CQALGO": "unpb",
+    "bdcout": 5,
+    "bdname": "YX",
+    "bdnum": 10,
+    "bdof": "on",
+    "ckui": "or",
+    "dpi": 960,
+    "lightime": 20000,
+    "m1": 2,
+    "mainui": "Srtopui",
+    "sound": "on"
+}
