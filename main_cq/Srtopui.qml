@@ -23,8 +23,6 @@ Item {
         var day = currentTime.getDate();
         timehm.text = padZero(hours) +  padZero(minutes)
         timeseconds.text = padZero(seconds)
-        //timemonth.text = padZero(month)
-        //timeday.text = padZero(day)
     }
     function padZero(value) {
         return (value < 10 ? "0" : "") + value;
@@ -36,14 +34,11 @@ Item {
         console.log(old_l)
         ///////////
         light.source = "file:///" + appPath + "/UI/Srtopui/L/"+ old_l[0]
-        light_bg.x = Math.floor((Math.random() * (22 - 17 + 1)) + 17) * 10 / 960 * wM
-        light_bg.y= Math.floor((Math.random() * (-5 - (-31) + 1)) + (-31)) * 10 / 540 * hM
+        light_bg.x = Math.floor((Math.random() * (22 - 17 + 1)) + 17) * 10 * bI
+        light_bg.y= Math.floor((Math.random() * (-5 - (-31) + 1)) + (-31)) * 10 * bI
         light_bg.source = "file:///" + appPath + "/UI/Srtopui/L/"+ old_l[0]
         light_bgbg.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[0]
         ///////////
-        // light_another1.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[1]
-        // light_another2.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[2]
-        // light_another3.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[3]
         light_another1.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[1]
         light_another2.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[2]
         light_another3.source = "file:///" + appPath + "/UI/Srtopui/L/" +old_l[3]
@@ -121,8 +116,8 @@ Item {
             //模糊
             id:light_bgbg
             x:0
-            y :80 / 540 * hM
-            width: 960 / 960 * wM
+            y :80 * bI
+            width: 960 * bI
             height: width * 1390/1003
             //opacity: 0
             visible : true
@@ -138,18 +133,18 @@ Item {
     //var randomNumber = Math.floor(Math.random() * (260 - 168 + 1)) + 168;
     Item {
         Rectangle {
-                x : 171 / 960 * wM
-                y : 78 / 540 * hM
-                width: 704 / 960 * wM
+                x : 171 * bI
+                y : 78 * bI
+                width: 704 * bI
                 height: width * 437/704
                 clip: true // This property ensures that content outside the rectangle is not visible
                 Image {
                     id:light_bg
-                    x: Math.floor((Math.random() * (22 - 17 + 1)) + 17) * 10 / 960 * wM
-                    y: Math.floor((Math.random() * (-5 - (-31) + 1)) + (-31)) * 10 / 540 * hM
+                    x: Math.floor((Math.random() * (22 - 17 + 1)) + 17) * 10 * bI
+                    y: Math.floor((Math.random() * (-5 - (-31) + 1)) + (-31)) * 10 * bI
                     // x:225
-                    // y:-50 / 540 * hM
-                    width: 610 / 960 * wM
+                    // y:-50 * bI
+                    width: 610 * bI
                     height: width * 1390/1003
                     //fillMode: Image.PreserveAspectFit
                     }
@@ -159,8 +154,8 @@ Item {
         id: name
         Image {
                 id: top_ring
-                x: -284 * 0.375 / 960 * wM
-                y: -284 * 0.544 / 540 * hM
+                x: -284 * 0.375 * bI
+                y: -284 * 0.544 * bI
                 width: wM * 0.296
                 height: width
                 source: "file:///" + appPath+ "/UI/Srtopui/rings.png"
@@ -181,9 +176,9 @@ Item {
         }
         Image {
                 id: ring2
-                x: 475 / 960 * wM
-                y: 149 / 540 * hM
-                width: 284 / 960 * wM
+                x: 475 * bI
+                y: 149 * bI
+                width: 284 * bI
                 height: width
                 source: "file:///" + appPath+ "/UI/Srtopui/rings.png"
                 rotation: 360
@@ -245,14 +240,14 @@ Item {
         PropertyAnimation {
             target: light_another1
             property: "width"
-            to: 65.5 / 960 * wM
+            to: 65.5 * bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
         PropertyAnimation{
             target: light_another1
             property: "x"
-            to: 311.5 / 960 * wM
+            to: 311.5 * bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
@@ -274,14 +269,14 @@ Item {
         PropertyAnimation {
             target: light_another2
             property: "width"
-            to: 80.75 / 960 * wM
+            to: 80.75 * bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
         PropertyAnimation{
             target: light_another2
             property: "x"
-            to: 247.5/ 960 * wM
+            to: 247.5* bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
@@ -303,21 +298,21 @@ Item {
         PropertyAnimation {
             target: light_another3
             property: "width"
-            to: 68/ 960 * wM
+            to: 68* bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
         PropertyAnimation{
             target: light_another3
             property: "x"
-            to: 187.5/ 960 * wM
+            to: 187.5* bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
         PropertyAnimation{
             target: light_another3
             property: "y"
-            to: 341.75 / 540 * hM
+            to: 341.75 * bI
             duration: 500  // 动画时长，单位为毫秒
             easing.type: ss
         }
@@ -351,36 +346,21 @@ Item {
     Item{//datetime
         Text {
             id: timehm
-            x:758 / 960 * wM
+            x:758 * bI
             y:26 /540 * hM
             color:"white"
-            font.pixelSize: 13 / 960 * wM
+            font.pixelSize: 13 * bI
             font.family: sr_nls_ttf.name
         }
         Text {
             id: timeseconds
-            x:853 / 960 * wM
+            x:853 * bI
             y:26 /540 * hM
             color:"white"
-            font.pixelSize: 13 / 960 * wM
+            font.pixelSize: 13 * bI
             font.family: sr_nls_ttf.name
         }
-//        Text {
-//            id: timemonth
-//            x:55
-//            y:477
-//            color:"white"
-//            font.pixelSize: 13
-//            font.family: "SDK_SC_Web"
-//        }
-//        Text {
-//            id: timeday
-//            x:108
-//            y:477
-//            color:"white"
-//            font.pixelSize: 13
-//            font.family: "SDK_SC_Web"
-//        }
+
         Timer {
             interval: 1000
             running: true
@@ -395,10 +375,10 @@ Item {
         Item{//exitButton
             id:exitButton
             Image {
-                x: 922 / 960 * wM
+                x: 922 * bI
                 y: 23 /540 * hM
                 visible: true
-                width: 20 / 960 * wM
+                width: 20 * bI
                 height: width
                 source: "file:///" + appPath + "/UI/Srtopui/exit.png"
                 MouseArea {
@@ -416,9 +396,9 @@ Item {
             }
             Image {
                 id: aboutButton
-                x: 297 / 960 * wM
+                x: 297 * bI
                 y: 482 /540 * hM
-                width: 112 / 960 * wM
+                width: 112 * bI
                 height: width * 53 / 225
                 visible : true
                 source: "file:///" + appPath + "/UI/" + mainUI +"/aboutbtn.png"
@@ -443,9 +423,9 @@ Item {
             }
             Image {
                 id: setButton
-                x: 167 / 960 * wM
+                x: 167 * bI
                 y: 482 /540 * hM
-                width: 112 / 960 * wM
+                width: 112 * bI
                 height: width * 53 / 225
                 visible : true
                 source: "file:///" + appPath + "/UI/Srtopui/setbtn.png"
@@ -468,9 +448,9 @@ Item {
         Item{//ckbutton
             Image {
                 id: topButton
-                x: 732 / 960 * wM
+                x: 732 * bI
                 y: 477 /540 * hM
-                width: 168 / 960 * wM
+                width: 168 * bI
                 height: width * 60 / 308
                 visible : true
                 source: "file:///" + appPath + "/UI/" + mainUI +"/ckbtn.png"

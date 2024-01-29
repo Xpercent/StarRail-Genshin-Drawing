@@ -1,5 +1,6 @@
 QT += quick
 QT += multimedia
+
 #QT += quickcontrols2 graphicaleffects
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -14,6 +15,9 @@ SOURCES += \
 
 RESOURCES += qml.qrc
 LIBS += -lurlmon -lole32###
+
+LIBS += -lwininet
+
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
@@ -30,3 +34,5 @@ HEADERS += \
     start.h \
     varo.h \
     ver.h
+
+DISTFILES +=

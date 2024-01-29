@@ -1,24 +1,22 @@
 import QtQuick 2.12
-
+import QtQuick.Controls 2.15
 Item {
     id:item1
-    FontLoader {
-        id: pf_ttf
-        source: "file:///" + appPath + "/font/SDK_SC_Web.ttf"
-    }
+    property string font1: "Microsoft YaHei"
     function exit(){
         aboutexit.start()
         aboutButton.enabled= true;
         setButton.enabled =  true;
         topButton.enabled =  true;
     }
+
     Rectangle {
         id: about
-        width: 220 /  960 * wM
+        width: 220 * bI
         height: width * 434/220
         color: "#262c36"
         anchors.left: parent.left
-        anchors.leftMargin: -220 / 960 * wM
+        anchors.leftMargin: -220 * bI
         MouseArea {
             visible: true
             width:wM
@@ -30,31 +28,31 @@ Item {
         }
 
         Rectangle {
-                width: 35 / 960 * wM
-                height: parent.height
-                color: "#1a1a1a" // 切割部分的颜色
+            id:lRectangle
+            width: 35 * bI
+            height: parent.height
+            color: "#1a1a1a" // 切割部分的颜色
 
             }
         Text {
-            text: "\t 抽签软件"
-            font.pixelSize: 20 / 960 * wM
+            text: "抽签软件"
+            font.pixelSize: 20 * bI
             color: "#ffffff"
-            font.family: pf_ttf.name
+            font.family: font1
+            anchors.horizontalCenter: parent.horizontalCenter
+
         }
 
         Text {
 
-            text:"\n        基于QML和C++开发
-        版本:2023/1/12
-        来源:新世纪2023届94班
-        现:惠阳一中高一17班\n
-        Xpercent工作室制作
-        贡献名单: YX
-            \n        未经允许,禁止转载！
-            \n\n\n\n\n\n\n         联系YX ↓"
-            font.pixelSize: 14 / 960 * wM
+            text:cver[1]
+            anchors.left: lRectangle.left
+            anchors.top:lRectangle.top
+            anchors.leftMargin: 40 * bI
+            anchors.topMargin: 40 * bI
+            font.pixelSize: 14 * bI
             color: "#ffffff"
-            font.family: pf_ttf.name
+            font.family: font1
         }
 
         Text {
@@ -62,9 +60,9 @@ Item {
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             text: "访问网站"
-            font.pixelSize: 18 / 960 * wM
+            font.pixelSize: 18 * bI
             color: "#4a9ad8"
-            font.family: pf_ttf.name
+            font.family: font1
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -86,7 +84,7 @@ Item {
             id:aboutexit
             running: false
             property: "anchors.leftMargin"
-            to: -290 / 960 * wM
+            to: -290 * bI
             duration: 650 // 动画持续时间为 1 秒
             easing.type: Easing.OutQuad
             onFinished: {
@@ -97,4 +95,5 @@ Item {
         }
 
     }
+
 }
