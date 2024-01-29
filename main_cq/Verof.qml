@@ -4,16 +4,7 @@ Item{
     width: wM
     height: hM
     id:myvero
-    property string cloudver: ""
 
-    Ver{
-        id:veroff
-        onMyver: {
-            cloudver = v;
-            console.log(cloudver)
-            verof()
-        }
-    }
     Timer {
         id: timer2
         interval: 2000
@@ -25,7 +16,7 @@ Item{
     }
     Rectangle {
         id: about
-        width: 330 / 960 * wM
+        width: 330 * bI
         height: width * 30/330
         color: "#323132"
         anchors.horizontalCenter: myvero.horizontalCenter
@@ -37,7 +28,7 @@ Item{
         Text {
             id: name
             anchors.centerIn: parent
-            font.pixelSize: 20 / 960 * wM
+            font.pixelSize: 20 * bI
             color: "#e0e2df"
             font.family: "汉仪文黑-85W"
         }
@@ -46,7 +37,7 @@ Item{
             target: about
             running: false
             property: "anchors.topMargin"
-            to: 20 / 960 * wM// 目标位置在窗口内
+            to: 20 * bI// 目标位置在窗口内
             duration: 1000 // 动画持续时间为 1 秒
             easing.type: Easing.OutQuad
 
@@ -79,18 +70,15 @@ Item{
                 }
             }
     }
-    function verof(){
-        if(cloudver === "2024/01/12"){  //ver云版本 ！= 2023/11/18
 
+    Component.onCompleted: {
+        if(cver[0] === "2024/01/12" || cver[0] === "0"){  //ver云版本 ！= 2024/01/12
         }
         else{
             name.text = "发现新版本,请转到设置进行更新"
             animation.start()
             timer2.restart()
         }
-    }
-    Component.onCompleted: {
-        veroff.ver();
     }
 
 }

@@ -103,7 +103,7 @@ Item{
 
     Rectangle{
         id: setLabel
-        width: 600 / 960 * wM
+        width: 600 * bI
         height: width * 10/16
         color: "#1a1a1a"
         opacity: 0
@@ -122,10 +122,10 @@ Item{
             ScrollBar.vertical: ScrollBar {policy: ScrollBar.AlwaysOn}
             Column {
                 id:column
-                spacing: 30 / 540 * hM
+                spacing: 30 * bI
                 Rectangle{
                     width: 1
-                    height : 10 / 540 * hM
+                    height : 10 * bI
                     opacity: 0
                 }
                 Text{
@@ -134,14 +134,14 @@ Item{
                     color:"#ffffff"
                     font.family: font1
                     font.weight: Font.Bold
-                    font.pixelSize: 18 / 540 * hM
+                    font.pixelSize: 18 * bI
                 }
 
                 Rectangle{
-                    x:-10 / 960 * wM
-                    y:120 / 540 * hM
+                    x:-10 * bI
+                    y:120 * bI
                     width: setLabel.width - leftitem.width
-                    height: 50 / 540 * hM
+                    height: 50 * bI
                     radius: 5
                     color:"#262c36"
                     Text {
@@ -149,24 +149,24 @@ Item{
                         text:"主界面UI"
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
-                        anchors.leftMargin: 10 / 540 * hM
+                        anchors.leftMargin: 10 * bI
                         color:"#ffffff"
                         font.family: font1
-                        font.pixelSize: 18 / 540 * hM
+                        font.pixelSize: 18 * bI
                     }
                     ComboBox {
                         id : uibox
-                        width: height*4 / 960 * wM
+                        width: height*4 * bI
                         height: 28 / 549 * hM
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
-                        anchors.rightMargin: 28 / 960 * wM
+                        anchors.rightMargin: 28 * bI
                         background: Rectangle {
                             color:"#3e3e3e"
                         }
                         editable: false
                         font.family: font1
-                        font.pixelSize: 13 / 960 * wM
+                        font.pixelSize: 13 * bI
                         displayText: currentText
                         palette.buttonText: "#ffffff"
                         model: ["Gstopui", "Srtopui","or"]
@@ -181,10 +181,10 @@ Item{
                     }
                 }
                 Rectangle{
-                    x:-10 / 540 * hM
-                    y:120 / 540 * hM
+                    x:-10 * bI
+                    y:120 * bI
                     width: setLabel.width - leftitem.width
-                    height: 50 / 540 * hM
+                    height: 50 * bI
                     radius: 5
                     color:"#262c36"
                     Text {
@@ -192,24 +192,24 @@ Item{
                         text:"分辨率"
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
-                        anchors.leftMargin: 10 / 960 * wM
+                        anchors.leftMargin: 10 * bI
                         color:"#ffffff"
                         font.family: font1
-                        font.pixelSize: 18 / 960 * wM
+                        font.pixelSize: 18 * bI
                     }
                     ComboBox {
                         id : dpibox
-                        width: height*4 / 960 * wM
+                        width: height*4 * bI
                         height: 28 / 549 * hM
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
-                        anchors.rightMargin: 28 / 960 * wM
+                        anchors.rightMargin: 28 * bI
                         background: Rectangle {
                             color:"#3e3e3e"
                         }
                         editable: false
                         font.family: font1
-                        font.pixelSize: 13 / 960 * wM
+                        font.pixelSize: 13 * bI
                         displayText: currentText
                         palette.buttonText: "#ffffff"
                         model: ["1600x900", "1280x720","960x540"]
@@ -226,9 +226,9 @@ Item{
                     }
                 }
                 Rectangle{
-                        x:-10 / 540 * hM
+                        x:-10 * bI
                         width: setLabel.width - leftitem.width
-                        height: 50 / 540 * hM
+                        height: 50 * bI
                         radius: 5
                         color:"#262c36"
                         Text {
@@ -236,23 +236,23 @@ Item{
                             text:"声音"
                             anchors.left: parent.left
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.leftMargin: 10 / 960 * wM
+                            anchors.leftMargin: 10 * bI
                             font.family: font1
                             color:"#ffffff"
-                            font.pixelSize: 18 / 960 * wM
+                            font.pixelSize: 18 * bI
                         }
                         Rectangle {
                             id:btn5
-                            width: height*4 / 960 * wM
-                            height: 28 / 540 * hM
+                            width: height*4 * bI
+                            height: 28 * bI
                             anchors.right: parent.right
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.rightMargin: 28 / 960 * wM
+                            anchors.rightMargin: 28 * bI
                             color: "#3e3e3e"
                             radius: 5 // 设置圆角半径
                             Text {
                                 font.family: font1
-                                font.pixelSize: 19 / 960 * wM
+                                font.pixelSize: 19 * bI
                                 anchors.centerIn: parent
                                 text: soundtext
                                 color: "#ffffff"
@@ -273,12 +273,12 @@ Item{
                     color:"#ffffff"
                     font.family: font1
                     font.weight: Font.Bold
-                    font.pixelSize: 18 / 540 * hM
+                    font.pixelSize: 18 * bI
                 }
                 Rectangle{
                     x:-10 /540 * hM
                     width: setLabel.width - leftitem.width
-                    height: 50 / 540 * hM
+                    height: 50 * bI
                     radius: 5
                     color:"#262c36"
                     Text {
@@ -286,15 +286,15 @@ Item{
                         text:"重置概率"
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
-                        anchors.leftMargin: 10 / 960 * wM
+                        anchors.leftMargin: 10 * bI
                         font.family: font1
                         color:"#ffffff"
-                        font.pixelSize: 18 / 540 * hM
+                        font.pixelSize: 18 * bI
                     }
                     Rectangle {
                         id:btn1
                         width: height*4 /540 * hM
-                        height: 28 / 540 * hM
+                        height: 28 * bI
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.rightMargin: 28 /540 * hM
@@ -330,12 +330,12 @@ Item{
                         anchors.leftMargin: 10 /540 * hM
                         font.family: font1
                         color:"#ffffff"
-                        font.pixelSize: 18 / 540 * hM
+                        font.pixelSize: 18 * bI
                     }
                     Rectangle {
                         id:btn1_2
-                        width: height*4 / 540 * hM
-                        height: 28 / 540 * hM
+                        width: height*4 * bI
+                        height: 28 * bI
                         anchors.verticalCenter: btn1text_2.verticalCenter
                         anchors.rightMargin: 28 /540 * hM
                         anchors.right: parent.right
@@ -344,10 +344,10 @@ Item{
                         clip: true
                         TextInput {
                             id:btn1_textinput
-                            width: parent.width- 5 / 540 * hM
+                            width: parent.width- 5 * bI
                             height: parent.height
                             font.family: font1
-                            font.pixelSize: 19 / 540 * hM
+                            font.pixelSize: 19 * bI
                             anchors.centerIn: parent
                             color: "#ffffff"
                             text : m1
@@ -358,16 +358,16 @@ Item{
                     Rectangle{
                         id:btn1_3
                         width: height*2 /540 * hM
-                        height: 28 / 540 * hM
+                        height: 28 * bI
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: 15 / 540 * hM
-                        anchors.rightMargin: 28 / 540 * hM
+                        anchors.bottomMargin: 15 * bI
+                        anchors.rightMargin: 28 * bI
                         anchors.right: parent.right
                         color: "#4ca0e0"
                         radius: 5 // 设置圆角半径
                         Text {
                             font.family: font1
-                            font.pixelSize: 14 / 540 * hM
+                            font.pixelSize: 14 * bI
                             anchors.centerIn: parent
                             text: "Save"
                             color: "#000000"
@@ -388,12 +388,12 @@ Item{
                     color:"#ffffff"
                     font.family: font1
                     font.weight: Font.Bold
-                    font.pixelSize: 18 / 540 * hM
+                    font.pixelSize: 18 * bI
                 }
                 Rectangle{
-                        x:-10 / 540 * hM
+                        x:-10 * bI
                         width: setLabel.width - leftitem.width
-                        height: 50 / 540 * hM
+                        height: 50 * bI
                         radius: 5
                         color:"#262c36"
                         Text {
@@ -401,23 +401,23 @@ Item{
                             text:"使用教程"
                             anchors.left: parent.left
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.leftMargin: 10 / 540 * hM
+                            anchors.leftMargin: 10 * bI
                             font.family: font1
                             color:"#ffffff"
-                            font.pixelSize: 18 / 540 * hM
+                            font.pixelSize: 18 * bI
                         }
                         Rectangle {
                             id:btn4
-                            width: height*4 / 540 * hM
-                            height: 28 / 540 * hM
+                            width: height*4 * bI
+                            height: 28 * bI
                             anchors.right: parent.right
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.rightMargin: 28 / 540 * hM
+                            anchors.rightMargin: 28 * bI
                             color: "#3e3e3e"
                             radius: 5 // 设置圆角半径
                             Text {
                                 font.family: font1
-                                font.pixelSize: 19 / 540 * hM
+                                font.pixelSize: 19 * bI
                                 anchors.centerIn: parent
                                 text: "使用教程"
                                 color: "#ffffff"
@@ -437,12 +437,12 @@ Item{
                     color:"#ffffff"
                     font.family: font1
                     font.weight: Font.Bold
-                    font.pixelSize: 18 / 540 * hM
+                    font.pixelSize: 18 * bI
                 }
                 Rectangle{
-                        x:-10 / 540 * hM
+                        x:-10 * bI
                         width: setLabel.width - leftitem.width
-                        height: 50 / 540 * hM
+                        height: 50 * bI
                         radius: 5
                         color:"#262c36"
                         Text {
@@ -450,23 +450,23 @@ Item{
                             text:"安装目录"
                             anchors.left: parent.left
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.leftMargin: 10 / 540 * hM
+                            anchors.leftMargin: 10 * bI
                             font.family: font1
                             color:"#ffffff"
-                            font.pixelSize: 18 / 540 * hM
+                            font.pixelSize: 18 * bI
                         }
                         Rectangle {
                             id:btn2
-                            width: height*4 / 960 * wM
-                            height: 28 / 540 * hM
+                            width: height*4 * bI
+                            height: 28 * bI
                             anchors.right: parent.right
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.rightMargin: 28 / 540 * hM
+                            anchors.rightMargin: 28 * bI
                             color: "#3e3e3e"
                             radius: 5 // 设置圆角半径
                             Text {
                                 font.family: font1
-                                font.pixelSize: 19 / 960 * wM
+                                font.pixelSize: 19 * bI
                                 anchors.centerIn: parent
                                 text: "安装目录"
                                 color: "#ffffff"
@@ -481,9 +481,9 @@ Item{
 
                     }
                 Rectangle{
-                        x:-10 / 540 * hM
+                        x:-10 * bI
                         width: setLabel.width - leftitem.width
-                        height: 50 / 540 * hM
+                        height: 50 * bI
                         radius: 5
                         color:"#262c36"
                         Text {
@@ -491,23 +491,23 @@ Item{
                             text:"更新修复"
                             anchors.left: parent.left
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.leftMargin: 10 / 540 * hM
+                            anchors.leftMargin: 10 * bI
                             font.family: font1
                             color:"#ffffff"
-                            font.pixelSize: 18 / 540 * hM
+                            font.pixelSize: 18 * bI
                         }
                         Rectangle {
                             id:btn3
-                            width: height*4 / 960 * wM
-                            height: 28 / 540 * hM
+                            width: height*4 * bI
+                            height: 28 * bI
                             anchors.right: parent.right
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.rightMargin: 28 / 540 * hM
+                            anchors.rightMargin: 28 * bI
                             color: "#3e3e3e"
                             radius: 5 // 设置圆角半径
                             Text {
                                 font.family: font1
-                                font.pixelSize: 19 / 540 * hM
+                                font.pixelSize: 19 * bI
                                 anchors.centerIn: parent
                                 text: "更新修复"
                                 color: "#ffffff"
@@ -528,13 +528,13 @@ Item{
 
         Rectangle{
             id:leftitem
-            width: 160 / 540 * hM
+            width: 160 * bI
             height: setLabel.height
             color: "#00000000"
             Button {
                 id:leftButton1
                 anchors.top: parent.top
-                anchors.topMargin: 20 / 540 * hM
+                anchors.topMargin: 20 * bI
                 property color normalColor: "#00000000"
                 property color hoverColor: "#3d3d3e"
                 background: Rectangle {
@@ -543,16 +543,16 @@ Item{
                 text: "基础设置"
                 font.family: font1
                 font.weight: Font.Bold
-                font.pixelSize: 18 / 540 * hM
+                font.pixelSize: 18 * bI
                 palette.buttonText: "#ffffff"
                 onClicked: {
-                    scrollView.contentY = (text1.y -20/ 540 * hM)
+                    scrollView.contentY = (text1.y -20* bI)
                 }
             }
             Button {
                 id:leftButton2
                 anchors.top: leftButton1.top
-                anchors.topMargin: 40 / 540 * hM
+                anchors.topMargin: 40 * bI
                 property color normalColor: "#00000000"
                 property color hoverColor: "#3d3d3e"
                 background: Rectangle {
@@ -561,16 +561,16 @@ Item{
                 text: "概率设置"
                 font.family: font1
                 font.weight: Font.Bold
-                font.pixelSize: 18 / 540 * hM
+                font.pixelSize: 18 * bI
                 palette.buttonText: "#ffffff"
                 onClicked: {
-                    scrollView.contentY = (text2.y -20/ 540 * hM)
+                    scrollView.contentY = (text2.y -20* bI)
                 }
             }
             Button {
                 id:leftButton3
                 anchors.top: leftButton2.top
-                anchors.topMargin: 40 / 540 * hM
+                anchors.topMargin: 40 * bI
                 property color normalColor: "#00000000"
                 property color hoverColor: "#3d3d3e"
                 background: Rectangle {
@@ -579,16 +579,16 @@ Item{
                 text: "使用教程"
                 font.family: font1
                 font.weight: Font.Bold
-                font.pixelSize: 18 / 540 * hM
+                font.pixelSize: 18 * bI
                 palette.buttonText: "#ffffff"
                 onClicked: {
-                    scrollView.contentY = (text3.y -20/ 540 * hM)
+                    scrollView.contentY = (text3.y -20* bI)
                 }
             }
             Button {
                 id:leftButton4
                 anchors.top: leftButton3.top
-                anchors.topMargin: 40 / 540 * hM
+                anchors.topMargin: 40 * bI
                 property color normalColor: "#00000000"
                 property color hoverColor: "#3d3d3e"
                 background: Rectangle {
@@ -597,21 +597,21 @@ Item{
                 text: "版本信息"
                 font.family: font1
                 font.weight: Font.Bold
-                font.pixelSize: 18 / 540 * hM
+                font.pixelSize: 18 * bI
                 palette.buttonText: "#ffffff"
                 onClicked: {
-                    scrollView.contentY = (text4.y -20/ 540 * hM)
+                    scrollView.contentY = (text4.y -20* bI)
                 }
             }
             Text{
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: 6 / 540 * hM
+                anchors.bottomMargin: 6 * bI
                 anchors.left: parent.left
-                anchors.leftMargin: 5 / 540 * hM
+                anchors.leftMargin: 5 * bI
                 text:"\uf3b1"
                 font.family: icon_ttf.name
                 color:"#ffffff"
-                font.pixelSize: 40 / 540 * hM
+                font.pixelSize: 40 * bI
                 MouseArea{
                     anchors.fill: parent
                     onClicked: {

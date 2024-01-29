@@ -2,36 +2,36 @@ import QtQuick 2.12
 
 Rectangle {
     id: about
-    width: 200 / 960 * wM
+    width: 200 * bI
     height: width/ 2
     color: "#262c36"
     anchors.left: parent.left
     anchors.top: parent.top
-    anchors.leftMargin: -200 / 960 * wM
+    anchors.leftMargin: -200 * bI
     //x: -200 // 初始位置在窗口外
     Rectangle {
-            width: 40 / 960 * wM
+            width: 40 * bI
             height: parent.height
             color: "#1a1a1a" // 切割部分的颜色
         }
     Text {
         text: "By YX!"
         anchors.top: parent.top
-        anchors.topMargin: 4 / 540 * hM
+        anchors.topMargin: 4 * bI
         anchors.right: parent.right
-        anchors.rightMargin: 40 / 960 * wM
-        font.pixelSize: 24 / 960 * wM
+        anchors.rightMargin: 40 * bI
+        font.pixelSize: 24 * bI
         color: "#ffffff"
         font.family: "Microsoft YaHei"
     }
     Text {
         text: "了解更多请见详情" + "\n使用教程请见设置"
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 8 / 540 * hM
+        anchors.bottomMargin: 8 * bI
         anchors.right: parent.right
-        anchors.rightMargin: 10 / 960 * wM
+        anchors.rightMargin: 10 * bI
 
-        font.pixelSize: 18 / 960 * wM
+        font.pixelSize: 18 * bI
         color: "#ffffff"
         font.family: "Microsoft YaHei"
     }
@@ -62,7 +62,8 @@ Rectangle {
         duration: 1000 // 第二个动画的持续时间为 1 秒
         easing.type: Easing.OutQuad
         onFinished: {
-            about.destroy()
+            aboutairloade.source = ""
+            //about.destroy()
         }
     }
 }

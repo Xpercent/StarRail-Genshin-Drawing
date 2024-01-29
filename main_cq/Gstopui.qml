@@ -74,32 +74,32 @@ Item {
         height: parent.height
         Text {
             id: timehm
-            x:770 / 960 * parent.width
-            y:17 / 540 * parent.height
+            x:770 * bI
+            y:17 * bI
             color:"white"
             font.pixelSize: 13 /960 * parent.width
             font.family: gs_nls_ttf.name
         }
         Text {
             id: timeseconds
-            x:863 / 960 * parent.width
-            y:17 / 540 * parent.height
+            x:863 * bI
+            y:17 * bI
             color:"white"
             font.pixelSize: 13 /960 * parent.width
             font.family: gs_nls_ttf.name
         }
         Text {
             id: timemonth
-            x:55 / 960 * parent.width
-            y:478 / 540 * parent.height
+            x:55 * bI
+            y:478 * bI
             color:"white"
             font.pixelSize: 13 /960 * parent.width
             font.family: gs_nls_ttf.name
         }
         Text {
             id: timeday
-            x:108 / 960 * parent.width
-            y:478 / 540 * parent.height
+            x:108 * bI
+            y:478 * bI
             color:"white"
             font.pixelSize: 13 /960 * parent.width
             font.family: gs_nls_ttf.name
@@ -121,10 +121,10 @@ Item {
             width: parent.width
             height: parent.height
             Image {
-                x: 907 / 960 * parent.width
-                y: 9 / 540 * parent.height
+                x: 907 * bI
+                y: 9 * bI
                 visible: true
-                width: 30 / 960 * parent.width
+                width: 30 * bI
                 height: width * 50 / 50
                 source: "file:///" + appPath + "/UI/Gstopui/exit.png"
                 MouseArea {
@@ -144,9 +144,9 @@ Item {
             }
             Image {
                 id: aboutButton
-                x: 130 / 960 * parent.width
-                y: 501 / 540 * parent.height
-                width: 86 / 960 * parent.width
+                x: 130 * bI
+                y: 501 * bI
+                width: 86 * bI
                 height: width * 32 / 130
                 visible : true
                 source: "file:///" + appPath + "/UI/Gstopui/aboutb.png"
@@ -171,9 +171,9 @@ Item {
             }
             Image {
                 id: setButton
-                x: 34 / 960 * parent.width
-                y: 501 / 540 * parent.height
-                width: 86 / 960 * parent.width
+                x: 34 * bI
+                y: 501 * bI
+                width: 86 * bI
                 height: width * 32 / 130
                 visible : true
                 source: "file:///" + appPath + "/UI/Gstopui/setb.png"
@@ -199,9 +199,9 @@ Item {
             height: parent.height
             Image {
                 id: topButton
-                x: 758 / 960 * parent.width
-                y: 484 / 540 * parent.height
-                width: 172 / 960 * parent.width
+                x: 758 * bI
+                y: 484 * bI
+                width: 172 * bI
                 height: width * 66 / 289
                 visible : true
                 source: "file:///" + appPath + "/UI/Gstopui/ckbutton.png"
@@ -237,7 +237,7 @@ Item {
             opacity: 1 // 初始透明度为1
             Image {
                 id: open
-                width: 960 / 540 * parent.height
+                width: 960 * bI
                 height: width * 1080 / 1920
                 source: "file:///" + appPath+ "/UI/Gstopui/open.png"
                 opacity: 0

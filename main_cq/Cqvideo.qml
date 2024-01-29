@@ -34,15 +34,15 @@ Item{//Topvideo
         text: "跳过>"
         font.family: font1
         font.weight: Font.Bold
-        font.pixelSize: 19 / 960 * parent.width
+        font.pixelSize: 19 * bI
         anchors.right: parent.right
         anchors.top: parent.top
-        anchors.rightMargin: 4 / 960 * parent.width
-        anchors.topMargin: 4 / 540 * parent.height
-        // x:886 / 960 * parent.width
-        // y:5 / 540 * parent.height
+        anchors.rightMargin: 4 * bI
+        anchors.topMargin: 4 * bI
+        // x:886 * bI
+        // y:5 * bI
 
-        width: 68 / 960 * parent.width
+        width: 68 * bI
         height: width * 33/68
         //visible: false  // 隐藏
         onClicked: {
@@ -56,20 +56,20 @@ Item{//Topvideo
         font.family: font1
         font.weight: Font.Bold
         color: "#e2dfd5"
-        font.pixelSize: 200 / 960 * parent.width
+        font.pixelSize: 200 * bI
     }
 
     Text {
         id:text1
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        anchors.rightMargin: 4 / 960 * parent.width
-        anchors.topMargin: 4 / 540 * parent.height
+        anchors.rightMargin: 4 * bI
+        anchors.topMargin: 4 * bI
         visible : false
         text: "点击任意处以关闭"
         font.family: font1
         font.weight: Font.Bold
-        font.pixelSize: 18 / 960 * parent.width
+        font.pixelSize: 18 * bI
         color: "#e2dfd5"
     }
     Rectangle {
