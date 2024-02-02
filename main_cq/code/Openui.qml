@@ -4,9 +4,6 @@ import QtQuick.Controls.Styles 1.2
 import QtQuick.Dialogs 1.2
 import QtGraphicalEffects 1.15
 Item{
-    Loader{
-        id:ui
-    }
     Loader {
         id: aboutairloade
     }
@@ -17,7 +14,6 @@ Item{
         color: "#131313"
         opacity: 1 // 初始透明度为1
         z:99
-        visible: false
         Image {
             id: open
             width: wM
@@ -31,12 +27,12 @@ Item{
                         to: 1
                         duration: 400 // 持续时间，单位为毫秒
                     }
-                    ScriptAction {
-                        script: {
-                            ui.source = mainUI + ".qml"
-                            ui.enabled = false
-                        }
-                    }
+                    // ScriptAction {
+                    //     script: {
+                    //         ui.source = mainUI + ".qml"
+                    //         ui.enabled = false
+                    //     }
+                    // }
                     PauseAnimation {
                         duration: 500 // 暂停时间
                     }
@@ -63,7 +59,7 @@ Item{
                             // 在此处添加加载另一个QML的逻辑
                             aboutairloade.source = "Aboutair.qml"
                             about.destroy()
-                            ui.enabled = true
+                            //ui.enabled = true
                         }
                     }
 
@@ -71,11 +67,11 @@ Item{
 
         }
     }
-    Component.onCompleted: {
-        if(mainUI === "Gstopui"){
-            about.color = "#ffffff"
-        }
-        about.visible = true
-    }
+    // Component.onCompleted: {
+    //     if(mainUI === "Gstopui"){
+    //         about.color = "#ffffff"
+    //     }
+    //     about.visible = true
+    // }
 
 }

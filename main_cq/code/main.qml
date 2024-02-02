@@ -20,11 +20,15 @@ Window {
     property real bI: wM/960
     property var verMap
 
-
+    Loader {
+        id:ui
+        source: mainUI + ".qml"
+    }
     Loader {
         id:openui
         source: "Openui.qml"
     }
+
 
     Start{
         id:startv
@@ -32,7 +36,6 @@ Window {
 
     Loader {
         id:cverqml
-
     }
 
     Ver{
