@@ -1,8 +1,12 @@
 #ifndef VER_H
 #define VER_H
-#include <nlohmann/json.hpp>
+//#include <nlohmann/json.hpp>
 #include <QObject>
 #include <QString>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QMap>
 
 
 class Ver: public QObject
@@ -12,7 +16,7 @@ public:
     explicit Ver(QObject *parent = nullptr);
 signals:
     //void QStrVideoL(const QStringList &stringList);
-    void myver(const QStringList &v);
+    void myver(const QMap<QString,QVariant> &v);
 public slots:
     void ver();
 

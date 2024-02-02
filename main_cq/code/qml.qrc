@@ -9,5 +9,6 @@
         <file>Verof.qml</file>
         <file>Srtopui.qml</file>
         <file>Message.qml</file>
+        <file>Openui.qml</file>
     </qresource>
 </RCC>

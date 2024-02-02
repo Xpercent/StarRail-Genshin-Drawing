@@ -7,7 +7,7 @@ Window {
     width: wM
     height: hM
     visible: true
-    color: "black"
+    color: "#131313"
     minimumWidth: width
     minimumHeight: height
     maximumWidth: width
@@ -18,13 +18,12 @@ Window {
     property int wM : mainDpi
     property int hM : wM *0.5625
     property real bI: wM/960
-
-    property var cver: ["0","基于QML和C++开发\n版本:2023/1/12\n\nXpercent工作室制作\n\n贡献名单: YX\n\n未经允许,禁止转载！\n\n\n\n\n\n\n联系YX ↓"]
+    property var verMap
 
 
     Loader {
-        id:ui
-        source: mainUI + ".qml"
+        id:openui
+        source: "Openui.qml"
     }
 
     Start{
@@ -39,7 +38,8 @@ Window {
     Ver{
         id:veroff
         onMyver: {
-            cver = v;
+            verMap = v;
+            //console.log(varmap.url)
             cverqml.source = "Verof.qml"
         }
     }

@@ -115,7 +115,6 @@ Item {
         id:click
         width: parent.width
         height: parent.height
-        enabled: false
         Item{//exitButton
             id:exitButton
             width: parent.width
@@ -220,68 +219,7 @@ Item {
         id: cq_video
     }
 
-    Loader {
-            id: aboutairloade
-        }
 
-    Item{
-        width: parent.width
-        height: parent.height
-        Rectangle {
-            id: about
-            width: parent.width
-            height: parent.height
-            color: "#ffffff"
-            //x: (960 - width) / 2
-            //y:-200
-            opacity: 1 // 初始透明度为1
-            Image {
-                id: open
-                width: 960 * bI
-                height: width * 1080 / 1920
-                source: "file:///" + appPath+ "/UI/Gstopui/open.png"
-                opacity: 0
-                SequentialAnimation on opacity{
-                        NumberAnimation {
-                            target: open
-                            property: "opacity"
-                            to: 1
-                            duration: 400 // 持续时间，单位为毫秒
-                        }
-                        PauseAnimation {
-                            duration: 500 // 暂停时间
-                        }
-
-                        ParallelAnimation {
-                            NumberAnimation {
-                                target: about
-                                property: "scale"
-                                to: 2 // 放大倍数
-                                duration: 470
-                                easing.type: Easing.InOutQuart
-                            }
-                            NumberAnimation {
-                                target: about
-                                property: "opacity"
-                                to: 0
-                                duration: 470
-                                easing.type: Easing.InOutQuart
-                            }
-                        }
-                        ScriptAction {
-                            script: {
-                                // 在此处添加加载另一个QML的逻辑
-                                aboutairloade.source = "Aboutair.qml"
-                                click.enabled = true
-                                about.destroy()
-                            }
-                        }
-
-                    }
-
-            }
-        }
-    }
 
 
     Component.onCompleted: {

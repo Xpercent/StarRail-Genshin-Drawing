@@ -72,7 +72,7 @@ Item{
     }
 
     Component.onCompleted: {
-        if(cver[0] === "2024/01/12" || cver[0] === "0"){  //ver云版本 ！= 2024/01/12
+        if(verMap.v === "2024/01/12" || verMap.v === "0"){  //ver云版本 ！= 2024/01/12
         }
         else{
             name.text = "发现新版本,请转到设置进行更新"

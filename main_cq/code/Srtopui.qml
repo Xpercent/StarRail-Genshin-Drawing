@@ -371,7 +371,6 @@ Item {
 
     Item{
         id:click
-        enabled: false
         Item{//exitButton
             id:exitButton
             Image {
@@ -471,67 +470,9 @@ Item {
         asynchronous: true
     }
 
-    Loader {
-            id: aboutairloade
-        }
 
-    Item{
-        Rectangle {
-            id: about
-            width: wM
-            height: hM
-            color: "#131313"
-            //x: (960 - width) / 2
-            //y:-200
-            opacity: 1 // 初始透明度为1
-            Image {
-                id: open
-                width: wM
-                height: width * 1080 / 1920
-                source: "file:///" + appPath+ "/UI/Srtopui/open.png"
-                opacity: 0
-                SequentialAnimation on opacity{
-                        NumberAnimation {
-                            target: open
-                            property: "opacity"
-                            to: 1
-                            duration: 400 // 持续时间，单位为毫秒
-                        }
-                        PauseAnimation {
-                            duration: 500 // 暂停时间
-                        }
 
-                        ParallelAnimation {
-                            NumberAnimation {
-                                target: about
-                                property: "scale"
-                                to: 2 // 放大倍数
-                                duration: 470
-                                easing.type: Easing.InOutQuart
-                            }
-                            NumberAnimation {
-                                target: about
-                                property: "opacity"
-                                to: 0
-                                duration: 470
-                                easing.type: Easing.InOutQuart
-                            }
 
-                        }
-                        ScriptAction {
-                            script: {
-                                // 在此处添加加载另一个QML的逻辑
-                                aboutairloade.source = "Aboutair.qml"
-                                click.enabled = true
-                                about.destroy()
-                            }
-                        }
-
-                    }
-
-            }
-        }
-    }
     Component.onCompleted: {
         lightime = varof.lighttimer()
         //console.log(lightime)

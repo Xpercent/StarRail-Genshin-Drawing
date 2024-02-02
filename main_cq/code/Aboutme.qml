@@ -40,12 +40,10 @@ Item {
             color: "#ffffff"
             font.family: font1
             anchors.horizontalCenter: parent.horizontalCenter
-
         }
-
         Text {
-
-            text:cver[1]
+            id:t2
+            text:"基于QML和C++开发\n版本:2023/1/12\n\n"
             anchors.left: lRectangle.left
             anchors.top:lRectangle.top
             anchors.leftMargin: 40 * bI
@@ -55,6 +53,27 @@ Item {
             font.family: font1
         }
 
+        Text {
+            id:t3
+            text:verMap.say1
+            anchors.left: lRectangle.left
+            anchors.bottom:t2.bottom
+            anchors.leftMargin: 40 * bI
+            anchors.bottomMargin: -20 * bI
+            font.pixelSize: 14 * bI
+            color: "#ffffff"
+            font.family: font1
+        }
+        Text {
+            text:"Xpercent工作室制作\n贡献名单: YX\n\n未经允许,禁止转载！\n\n\n\n\n\n\n联系YX ↓"
+            anchors.left: lRectangle.left
+            anchors.bottom:t3.bottom
+            anchors.leftMargin: 40 * bI
+            anchors.bottomMargin: -230 * bI
+            font.pixelSize: 14 * bI
+            color: "#ffffff"
+            font.family: font1
+        }
         Text {
             id:text
             anchors.bottom: parent.bottom
@@ -66,7 +85,7 @@ Item {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    Qt.openUrlExternally("https://xpercent-yx.github.io/")
+                    Qt.openUrlExternally(verMap.website)
                 }
             }
         }
