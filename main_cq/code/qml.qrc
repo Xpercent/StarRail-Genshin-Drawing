@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Gstopui.qml</file>
+        <file>Aboutme.qml</file>
+        <file>Setlable.qml</file>
+        <file>Aboutair.qml</file>
+        <file>Cqvideo.qml</file>
+        <file>Verof.qml</file>
+        <file>Srtopui.qml</file>
+        <file>Message.qml</file>
+        <file>Openui.qml</file>
+    </qresource>
+</RCC>
