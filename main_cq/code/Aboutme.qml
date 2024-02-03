@@ -43,7 +43,7 @@ Item {
         }
         Text {
             id:t2
-            text:"基于QML和C++开发\n版本:2023/1/12\n\n"
+            text:"基于QML和C++开发\n版本:2023/02/02\n\n"
             anchors.left: lRectangle.left
             anchors.top:lRectangle.top
             anchors.leftMargin: 40 * bI

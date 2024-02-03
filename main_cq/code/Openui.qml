@@ -8,70 +8,58 @@ Item{
         id: aboutairloade
     }
     Rectangle {
-        id: about
+        id: openrect
         width: wM
         height: hM
         color: "#131313"
         opacity: 1 // 初始透明度为1
-        z:99
+        //z:99
         Image {
             id: open
             width: wM
             height: width * 1080 / 1920
             source: "file:///" + appPath+ "/UI/"+mainUI+"/open.png"
             opacity: 0
-            SequentialAnimation on opacity{
-                    NumberAnimation {
-                        target: open
-                        property: "opacity"
-                        to: 1
-                        duration: 400 // 持续时间，单位为毫秒
-                    }
-                    // ScriptAction {
-                    //     script: {
-                    //         ui.source = mainUI + ".qml"
-                    //         ui.enabled = false
-                    //     }
-                    // }
-                    PauseAnimation {
-                        duration: 500 // 暂停时间
-                    }
-
-                    ParallelAnimation {
-                        NumberAnimation {
-                            target: about
-                            property: "scale"
-                            to: 2 // 放大倍数
-                            duration: 470
-                            easing.type: Easing.InOutQuart
-                        }
-                        NumberAnimation {
-                            target: about
-                            property: "opacity"
-                            to: 0
-                            duration: 470
-                            easing.type: Easing.InOutQuart
-                        }
-
-                    }
-                    ScriptAction {
-                        script: {
-                            // 在此处添加加载另一个QML的逻辑
-                            aboutairloade.source = "Aboutair.qml"
-                            about.destroy()
-                            //ui.enabled = true
-                        }
-                    }
-
-                }
-
         }
     }
-    // Component.onCompleted: {
-    //     if(mainUI === "Gstopui"){
-    //         about.color = "#ffffff"
-    //     }
-    //     about.visible = true
-    // }
+    Timer{
+        id:timer
+        interval:900
+        onTriggered: {
+            pp.start()
+            aboutairloade.source = "Aboutair.qml"
+        }
+    }
+    PropertyAnimation{
+        target: open
+        running: true
+        property: "opacity"
+        to: 1 // 放大倍数
+        duration: 400
+    }
+    ParallelAnimation{
+        id:pp
+        PropertyAnimation{
+            target: openrect
+            property: "scale"
+            to: 2 // 放大倍数
+            duration: 500
+            easing.type: Easing.InOutQuart
+        }
+        PropertyAnimation{
+            target: openrect
+            property: "opacity"
+            to: 0
+            duration: 500
+            easing.type: Easing.InOutQuart
+        }
+
+    }
+    Component.onCompleted: {
+        if(mainUI === "Gstopui"){
+            openrect.color = "#ffffff"
+        }
+        timer.start()
+    }
 
 }
