@@ -15,19 +15,30 @@ Item{//Topvideo
 
     }
 
+    Rectangle {
+        id: clickableRect
+        width: parent.width
+        height: parent.height
+        color: "#000000"
+        //z:-1
+        opacity: 0
+        enabled: false
+       // visible: false  // 隐藏矩形
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                cq_video.source = ""
+                click.enabled = true
+            }
+        }
+    }
+
     Video {
         id: video
         width: parent.width
         height: parent.height
         autoPlay: true
 
-    }
-    Video {
-        id: video2
-        width: parent.width
-        height: parent.height
-        autoPlay: false
-        volume: 0
     }
     Button {
         id:passB
@@ -39,14 +50,11 @@ Item{//Topvideo
         anchors.top: parent.top
         anchors.rightMargin: 4 * bI
         anchors.topMargin: 4 * bI
-        // x:886 * bI
-        // y:5 * bI
-
         width: 68 * bI
         height: width * 33/68
-        //visible: false  // 隐藏
         onClicked: {
-            video.seek(video.duration - 200)
+            timer.interval = 200
+            video.seek(video.duration - 300)
         }
     }
     Text {
@@ -72,52 +80,35 @@ Item{//Topvideo
         font.pixelSize: 18 * bI
         color: "#e2dfd5"
     }
-    Rectangle {
-        id: clickableRect
-        width: parent.width
-        height: parent.height
-        color: "white"
-        opacity: 0
-        visible: false  // 隐藏矩形
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                cq_video.source = ""
 
-                click.enabled = true
-            }
-        }
-    }
+
     Timer {
             id: timer
-            interval: 100 // 调整定时器的间隔
-            repeat: true
+            interval: video.duration - 200
             running: false
+            repeat: true
             onTriggered: {
-                if (video.position >= video.duration - 300) {
-                    video.pause();
-                    passB.visible = false
-                    timer2.start()
-                    video2.play();
-                    clickableRect.visible = true
+                clickableRect.opacity = 1
+                clickableRect.enabled = true
+                passB.visible = false
+                video.volume = 0
+                video.source = appPath + "/UI/" + mainUI + "/bgUI/" + qstr_cqv[0]
+                timer2.start()
+                clickableRect.visible = true
 
-                    clickedText.visible = true;
-                    text1.visible = true;
-                    video.destroy()
-                    timer.stop()
-                }
+                clickedText.visible = true;
+                text1.visible = true;
+                timer.stop()
             }
     }
     Timer {
             id: timer2
-            interval: 100 // 调整定时器的间隔
-            repeat: true
+            interval: video.duration - 200
             running: false
             onTriggered: {
-                if (video2.position >= (video2.duration - 300)) {
-                    video2.pause();
-                    timer2.stop()
-                }
+                video.pause();
+                timer2.stop()
+
             }
     }
 
@@ -137,13 +128,9 @@ Item{//Topvideo
     Component.onCompleted: {
         videosound()
         video.source= appPath + "/UI/" + mainUI + "/ck.mp4"
-        video.play()
-        timer.start();
+        timer.start()
         qstr_cqv = cquicpp.cqui(mainUI)
-        video2.source= appPath + "/UI/" + mainUI + "/bgUI/" + qstr_cqv[0]
         clickedText.text = qstr_cqv[1]
-
-
 
     }
 }

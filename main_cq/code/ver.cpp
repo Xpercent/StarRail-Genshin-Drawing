@@ -41,29 +41,6 @@ void Ver::ver()
             //QJsonObject jsonObject = jsonDocument.object();
             QMap<QString,QVariant> qmap = jsonDocument.toVariant().toMap();
 
-            //std::ifstream jsonFile(filePath.toStdString());  // Convert QString to std::string
-            //nlohmann::json jsonData;
-            //jsonFile >> jsonData;
-
-            // try {
-            //     verlist << QString::fromStdString(jsonData.at("v"));
-            // } catch (...) {
-            //     verlist << "0";
-            // }
-            // try {
-            //     verlist << QString::fromStdString(jsonData.at("otheradd"));
-            // } catch (...) {
-            //     verlist << "";
-            // }
-            // try {
-            //     verlist << QString::fromStdString(jsonData.at("asay"));
-            // } catch (...) {
-            //      verlist << "基于QML和C++开发\n版本:2023/1/12\n\nXpercent工作室制作\n\n贡献名单: YX\n\n未经允许,禁止转载！\n\n\n\n\n\n\n联系YX ↓";
-            // }
-
-
-
-
             emit myver(qmap);
             thread->quit();
 

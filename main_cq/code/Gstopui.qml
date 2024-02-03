@@ -32,6 +32,18 @@ Item {
     }
 
     ///time------------------------
+    Timer {
+        id: timer
+        interval: video.duration - 500
+        running: true
+        repeat: true
+        onTriggered: {
+            video.pause();
+            timer.restart();
+            video.seek(0);
+            video.play();
+        }
+    }
     Item{//Topvideo
         width: parent.width
         height: parent.height
@@ -39,22 +51,7 @@ Item {
             id: video
             width: parent.width
             height: parent.height
-            source: appPath + "/UI/Gstopui/bg.mp4"
-            autoPlay: false
-            Timer {
-                id: timer
-                interval: 10
-                running: true
-                repeat: true
-                onTriggered: {
-                    if (video.position >= video.duration - 500) {
-                        video.pause();
-                        timer.restart();
-                        video.seek(1);
-                        video.play();
-                    }
-                }
-            }
+            source: appPath + "/UI/Gstopui/bg.mp4"  
         }
     }
     Item{//Topphoto
@@ -218,8 +215,6 @@ Item {
     Loader {
         id: cq_video
     }
-
-
 
 
     Component.onCompleted: {

@@ -467,10 +467,8 @@ Item {
 
     Loader {
         id: cq_video
-        asynchronous: true
+        //asynchronous: true
     }
-
-
 
 
     Component.onCompleted: {

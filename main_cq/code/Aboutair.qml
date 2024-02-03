@@ -58,11 +58,12 @@ Rectangle {
         target: about
         property: "anchors.topMargin"
         running: false
-        to: -500 / 540 * wM // 第二个动画的目标高度
-        duration: 1000 // 第二个动画的持续时间为 1 秒
+        to: -100 / 540 * wM // 第二个动画的目标高度
+        duration: 200 // 第二个动画的持续时间为 1 秒
         easing.type: Easing.OutQuad
         onFinished: {
             aboutairloade.source = ""
+            openui.source = ""
             //about.destroy()
         }
     }

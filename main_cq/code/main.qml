@@ -7,7 +7,7 @@ Window {
     width: wM
     height: hM
     visible: true
-    color: "#131313"
+    color: "#ffffff"
     minimumWidth: width
     minimumHeight: height
     maximumWidth: width
@@ -19,19 +19,21 @@ Window {
     property int hM : wM *0.5625
     property real bI: wM/960
     property var verMap
-
-    Loader {
-        id:ui
-        source: mainUI + ".qml"
-    }
     Loader {
         id:openui
         source: "Openui.qml"
+        z:99
     }
 
 
     Start{
         id:startv
+    }
+
+
+    Loader {
+        id:ui
+        source: mainUI + ".qml"
     }
 
     Loader {
@@ -42,10 +44,13 @@ Window {
         id:veroff
         onMyver: {
             verMap = v;
-            //console.log(varmap.url)
+            console.log(verMap.v)
             cverqml.source = "Verof.qml"
         }
     }
+
+
+
     Component.onCompleted: {
         startv.start()
         veroff.ver();
