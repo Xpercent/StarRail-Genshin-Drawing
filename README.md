@@ -2,8 +2,8 @@
 ## 基于Qml和C++开发的一款桌面端原神崩铁抽签软件<br>
 视频演示请见<br>
 [https://space.bilibili.com/9579763](https://space.bilibili.com/1180550329)<br>
-软件下载请见release<br>
-https://github.com/Xpercen/StarRail-Genshin-Drawing/releases<br>
+软件下载地址<br>
+https://gitcode.net/yyx2216/genshin-prays-for-class-qml/-/raw/master/cq.zip<br>
 ==
 <br>
 
